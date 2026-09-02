@@ -40,7 +40,7 @@ function renderizar() {
     card.classList.add("card");
 
     card.innerHTML = `
-      <P>${personagem.nome}</P>
+      <P class="nomeP">${personagem.nome}</P>
       <p>${personagem.difficulty}</p>
       <p>score: <span>${personagem.score}</span></p>
       <button 
