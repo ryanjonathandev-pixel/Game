@@ -20,5 +20,19 @@ body {
     circle 200px at 50% 50%,
     transparent 0%,
     black 100%
-);
+    );
+    pointer-events: none
+}
+
+img {
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+  position: absolute;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+img:hover {
+  opacity: 0.5;
 }
