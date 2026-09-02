@@ -57,6 +57,10 @@ input {
 
 }
 
+.nomeP {
+    font-size: 20px
+}
+
 select {
     width: 75px;
     height: 30px;
