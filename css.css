@@ -5,6 +5,7 @@ body {
     background-size: auto;
     background-repeat: no-repeat;
     background-position: right top;
+    background-attachment: fixed;
 }
 
 @font-face {
