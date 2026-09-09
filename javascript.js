@@ -108,7 +108,18 @@ function atualizarC() {
 
 
 
-function editarPersonagem(id) { const personagem = personagens.find((personagem) => personagem.id === id); const cards = document.querySelectorAll(".card"); cards.forEach((card) => { if (card.innerHTML.includes(personagem.nome)) { card.innerHTML = ` <input type="text" id="editNome" value="${personagem.nome}" > <select id="editDifficulty"> <option value="cry-baby">Cry Baby</option> <option value="normal">Normal</option> <option value="brutal">Brutal</option> </select> <p>score: <span>${personagem.score}</span></p> <button type="button" onclick="salvarEdicao(${personagem.id})" class="blood"> SALVAR </button> `; card.querySelector("#editDifficulty").value = personagem.difficulty; } }); }
+function editarPersonagem(id) { 
+  const personagem = personagens.find((personagem) => personagem.id === id); 
+  const cards = document.querySelectorAll(".card"); 
+  cards.forEach((card) => { if (card.innerHTML.includes(personagem.nome)) { card.innerHTML = ` 
+   <input type="text" id="editNome" value="${personagem.nome}" > 
+    <select id="editDifficulty"> 
+    <option value="cry-baby">Cry Baby</option> 
+    <option value="normal">Normal</option> 
+    <option value="brutal">Brutal</option> </select> 
+    <p>score: <span>${personagem.score}</span></p> 
+    <button type="button" onclick="salvarEdicao(${personagem.id})" class="blood"> SALVAR </button> `; 
+   card.querySelector("#editDifficulty").value = personagem.difficulty; } }); }
 
 
 function salvarEdicao(id) {
