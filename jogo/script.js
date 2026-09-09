@@ -1,8 +1,9 @@
 const escuridao = document.getElementById("escuro");
+const quitButton = document.getElementById("Quitbutton");
 
 function acenderLanterna() {
     escuridao.style.background =
-        "radial-gradient(circle 200px at center, transparent, black)";
+        "radial-gradient(circle, transparent 100px, black 250px)";
 }
 
 function apagarLanterna() {
@@ -12,10 +13,6 @@ function apagarLanterna() {
 document.addEventListener("pointerdown", acenderLanterna);
 document.addEventListener("pointerup", apagarLanterna);
 
-// Quit button //
-
-const quitButton = document.getElementById("Quitbutton");
-
-quitButton.addEventListener("click", function() {
-    window.location.href = "index.html";
+quitButton.addEventListener("click", function () {
+    window.location.href = "../index.html";
 });
