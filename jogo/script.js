@@ -3,7 +3,7 @@ const quitButton = document.getElementById("Quitbutton");
 
 function acenderLanterna() {
     escuridao.style.background =
-        "radial-gradient(circle, transparent 100px, black 250px)";
+        "radial-gradient(circle, transparent 250px, black 300px)";
 }
 
 function apagarLanterna() {
