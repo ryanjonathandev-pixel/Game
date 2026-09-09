@@ -11,8 +11,7 @@ body {
 }
 
 
-@font-fa
-ce {
+@font-face {
     font-family: 'MinhaFonte';
     src: url('outlast_2_game.otf') format('truetype');
     
