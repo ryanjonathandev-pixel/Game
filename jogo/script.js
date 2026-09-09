@@ -10,3 +10,11 @@ function apagarLanterna() {
 
 document.addEventListener("pointerdown", acenderLanterna);
 document.addEventListener("pointerup", apagarLanterna);
+
+//Quit button//
+
+const quitButton = document.getElementById("QuitButton");
+
+quitButton.addEventListener("click", function() {
+    window.location.href = "index.html";
+}
