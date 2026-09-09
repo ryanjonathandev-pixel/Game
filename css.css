@@ -1,11 +1,11 @@
+html {
+    background: url('background.png') center top / cover no-repeat fixed;
+}
+
 body {
     margin: 0;
-    height: 100vh;
-    background-image: url('background.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
+    min-height: 100vh;
+    background: transparent;
 }
 
 @font-face {
