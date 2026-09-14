@@ -140,13 +140,10 @@ function salvarEdicao(id) {
 
 // musica
 
-musica.addEventListener('DOMContentLoaded', iniciarMusica);
 
 function iniciarMusica() {
     const musica = document.getElementById("musica");
     musica.play();
-
-    document.removeEventListener("click", iniciarMusica);
 }
 
-document.addEventListener("click", iniciarMusica);
+document.addEventListener("DOMContentLoaded", iniciarMusica);
