@@ -31,7 +31,7 @@ body {
 }
 
 .campo{
-    width: 325px;
+    width: 225px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;  
@@ -40,12 +40,17 @@ body {
 .boddy {
     width:500px;
     padding-top: 50px;
-    padding-left: 100px;
+    padding-left: 10%;
 }
 
 input {
-    width: 150px;
-    color: rgb(0, 0, 0);
+    width: 75px;
+    height: 20px;
+    color: rgba(255, 255, 255, 1);
+    border: none;
+    text-decoration: underline;
+    outline-color: white;
+    background-color:rgba(66, 68, 90, 0.11);
 }
 
 
@@ -71,6 +76,11 @@ select {
 }
 
 select:focus {
+    outline: none;
+    border: none;
+}
+
+input:focus {
     outline: none;
     border: none;
 }
@@ -160,6 +170,7 @@ section {
 }
 
 .card {
+    width: 215px;
     margin-bottom: 20px;
 }
 
@@ -167,4 +178,10 @@ sec {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
