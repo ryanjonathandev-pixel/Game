@@ -144,6 +144,8 @@ function salvarEdicao(id) {
 function iniciarMusica() {
     const musica = document.getElementById("musica");
     musica.play();
+
+    document.removeEventListener("click", iniciarMusica);
 }
 
-document.addEventListener("DOMContentLoaded", iniciarMusica);
+document.addEventListener("click", iniciarMusica);
