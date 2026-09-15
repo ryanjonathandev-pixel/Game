@@ -1,8 +1,8 @@
 function abrirPopup() {
     fatalError()
     document.body.insertAdjacentHTML("beforeend", `
-
-<div id="popup" class="popup">
+<section class="backgroundBlur" id="backgroundBlur">
+  <div id="popup" class="popup">
         <img
             src="Popup/personagem.png"
             class="personagem"
@@ -26,13 +26,31 @@ function abrirPopup() {
 
     </div>
 
-</div>
+  </div>
+</section>
 
   
-   <style>
+<style>
+
+.backgroundBlur {
+    position: fixed;
+    inset: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.45);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    z-index: 9999;
+    animation: none;
+}
+   
 .popup {
     width: 420px;
-    height: 150px;
+    height: 200px;
 
     background: #eee0b9;
 
@@ -43,7 +61,7 @@ function abrirPopup() {
 
     font-family: "Segoe UI", Tahoma, Arial, sans-serif;
 
-    position: absolute;
+    position: fixed;
 
     left: 50%;
     top: 50%;
@@ -112,6 +130,10 @@ function abrirPopup() {
     z-index: 5;
 }
 
+@fontface {
+    font-family: 'Tahoma';
+    src: url('Tahoma.ttf') format('truetype');
+}
 
 .titulo {
     color: white;
@@ -120,6 +142,7 @@ function abrirPopup() {
     font-weight: normal;
 
     padding-left: 12px;
+    font-family: Tahoma;
 }
 
 
@@ -186,7 +209,8 @@ function abrirPopup() {
     z-index: 2;
 
     /* empurra o texto para a direita */
-    margin-left: 100px;
+    margin-top: -25px;
+    margin-left: 45px
 }
 
 
@@ -199,10 +223,10 @@ function abrirPopup() {
 .personagem {
     position: absolute;
 
-    width: 200px;
+    width: 225px;
 
     left: -25px;
-    bottom: -33px;
+    bottom: -37px;
 
     z-index: 8;
 
@@ -218,11 +242,10 @@ document.addEventListener("DOMContentLoaded", abrirPopup);
 
 function fecharPopup(event) {
     event.preventDefault();
-    document.getElementById("popup").remove();
+    document.getElementById("backgroundBlur").remove();
 }
 
 function fatalError() {
     const som = new Audio("fatalError.mp3");
     som.play();
 }
-
