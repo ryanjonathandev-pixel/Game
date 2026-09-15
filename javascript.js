@@ -43,6 +43,7 @@ function renderizar() {
       <P>${personagem.nome}</P>
       <p>${personagem.difficulty}</p>
       <p>score: <span>${personagem.score}</span></p>
+    <div id="buttons">
       <button 
           type="button"
           onclick="apagarPersonagem(${personagem.id})"
@@ -64,6 +65,7 @@ function renderizar() {
           class="blood">
         EDITAR
       </button>
+    </div>
     `;
 
     lista.appendChild(card);
